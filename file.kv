@@ -1,0 +1,103 @@
+LoginScreen:
+    BoxLayout:
+
+        orientation: 'vertical'
+        padding: dp(20)
+        spacing: dp(20)
+
+        canvas.before:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: 'va69.png'
+
+        BoxLayout:
+            spacing:25
+            orientation:'vertical'
+            Label:
+                text: "CITPC CONNECTOR"
+                font_name: "Poppins-Bold.ttf"
+                halign: "center"
+                font_size: 75
+                theme_text_color: "Primary"
+                color:'black'
+            Label:
+                id: result_label
+                text: "Login To Any Campus-Operated Router"
+                halign: "center"
+                font_style: "Overline"
+                theme_text_color: "Error"
+                color:"blue"
+                font_size:36
+            
+        
+        Label:
+        Label:
+        Label:
+        Label:
+            text: "Before logging in, please make sure you have opened\n\nWiFi on this device and are connected to a network."   
+            halign: "center"
+            #font_style: "Overline"
+            font_name:"Helvetica.ttf"
+            theme_text_color: "Secondary"
+            font_size:33
+            color:'black'
+        Label:
+            text: "USERNAME"
+            halign: "left"
+            font_style: "Overline"
+            theme_text_color: "Primary"
+            size_hint:1,.5
+            color:"black"
+            font_name:"Helvetica-Bold.ttf"
+            font_size:42
+    
+
+        TextInput:
+            id: username
+            hint_text:"080bel042"
+            font_name:"Helvetica.ttf"
+
+        Label:
+            text: "PASSWORD"
+            halign: "left"
+            font_style: "Overline"
+            theme_text_color: "Primary"
+            size_hint:1,.5
+            color:"black"
+            font_name:"Helvetica-Bold.ttf"
+            font_size:42
+
+        TextInput:
+            id: password
+            password: True
+            hint_text:"XXXX-XXXX"
+            font_name:"Helvetica.ttf"
+
+        Label:
+            id: result_label
+            text: "[Waiting To Connect]"
+            halign: "center"
+            font_style: "Overline"
+            theme_text_color: "Error"
+            color:"red"
+            font_size:39
+        
+    
+
+        Button:
+            text: "CONNECT"
+            pos_hint: {"center_x": 0.5}
+            on_press: root.login()
+            font_name: "BeautifulPeoplePersonalUse-dE0g.ttf"
+            font_size: 42
+            md_bg_color: "blue"
+            color: "white"
+            font_name:"Intro Regular Alt.otf"
+        
+        Label:
+            text:"D e v e l o p e d   B y   © B E L 2 0 8 0 A B "
+            font_size:30
+            font_name:"Helvetica.ttf"
+            color:"black"
+            
